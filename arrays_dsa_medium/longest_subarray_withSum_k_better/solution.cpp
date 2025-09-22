@@ -9,7 +9,7 @@ int longestSubArray(const vector<int>&arr,long long k){
         if(sum==k){
             maxLen=max(maxLen,i+1);
         }
-        int rem = sum-k;
+        long long rem = sum-k;
         if(preSumMap.find(rem)!=preSumMap.end()){
             int len=i-preSumMap[rem];
             maxLen=max(maxLen,len);
